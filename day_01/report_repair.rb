@@ -20,4 +20,13 @@ module ReportRepair
       end
     end
   end
+
+  def self.hash_product(list)
+    h = Hash.new
+    list.each do |fix|
+      return (RESULT - fix) * fix if h.keys.include?(fix)
+
+      h[RESULT - fix] = 1
+    end
+  end
 end
