@@ -29,4 +29,31 @@ module ReportRepair
       h[RESULT - fix] = 1
     end
   end
+
+  def self.hash_product3(list)
+    #h = Hash.new
+    list_size = list.length - 2
+    list[0..list_size].each_with_index do |fix, index|
+      h = Hash.new
+      list[(index + 2)..list_size].each do |mov|
+        #puts " index, #{index}, fix, #{fix},  fix2 #{list[index+1]}, mov, #{mov}), h.keys: #{h.keys.join(',')}"
+        return(fix * list[index+1] * mov) if h.keys.include?(mov)
+
+        h[2020 - (fix + list[index+1])] = 1
+      end
+    end
+  end
+
+  def self.hash_product3e(list)
+    list_size = list.length - 1
+    list.each_with_index do |fix1, i|
+      h = Hash.new
+      list[(i + 1)..list_size].each do |fix2|
+        puts " i, #{i}, fix1, #{fix1},  fix2 #{fix2}, (RESULT - fix1 - fix2), #{(RESULT - fix1 - fix2)}), h.keys: #{h.keys.join(',')}"
+        return (RESULT - fix1 - fix2) * fix2 * fix1 if h.keys.include?(fix2)
+
+        h[RESULT - fix1 - fix2] = 1
+      end
+    end
+  end
 end

@@ -20,4 +20,14 @@ RSpec.describe ReportRepair do
     expense_report = [1721, 979, 366, 299, 675, 1456]
     expect(ReportRepair.hash_product(expense_report)).to eq(514579)
   end
+
+  it 'product finds the product of the three entries that sum to 2020 using  hash ' do
+    expense_report = [1721, 979, 366, 299, 675, 1456]
+    expect(ReportRepair.hash_product3(expense_report)).to eq(241861950)
+  end
+
+  it 'product finds the product of the three entries that sum to 2020 using  hash ' do
+    expense_report = [1721, 979, 366, 299, 675, 1456]
+    expect(ReportRepair.hash_product3e(expense_report)).to eq(241861950)
+  end
 end
