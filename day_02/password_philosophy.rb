@@ -21,10 +21,10 @@ module PasswordPhilosophy
     list.each do |e|
       password = e[1]
       policy_char = e[0][1]
-      policy_range = e[0][0].split("-").map(&:to_i)
-      policy_min = policy_range[0]
-      policy_max = policy_range[1]
-      result += 1 if (password[policy_min] == policy_char) ^ (password[policy_max] == policy_char)
+      policy_positions = e[0][0].split("-").map(&:to_i)
+      position_one = policy_positions[0]
+      position_two = policy_positions[1]
+      result += 1 if (password[position_one] == policy_char) ^ (password[position_two] == policy_char)
     end
     result
   end
