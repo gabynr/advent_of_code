@@ -11,4 +11,8 @@ RSpec.describe PassportProcessing do
     expect(PassportProcessing.passport_valid(field)).to eq(2)
   end
 
+  it 'validates byr' do
+    expect(PassportProcessing.validate_byr("1931")).to eq(true)
+  end
+
 end
