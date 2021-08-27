@@ -1,76 +1,101 @@
 #
 module BinaryBoarding
 
-  def self.binary_space_partitioning(arg)
-    rang = []
+  def self.seat_id(arg)
+    highest_id = 0
+    arg.each { |a|
+      set_id = (row(a) * 8) + column(a)
+      highest_id  = set_id if  set_id > highest_id
+    }
+    highest_id
+  end
 
+  def self.column(arg)
+    rang_column = []
+    column = 0
+    rang = [0,7]
+    array_colum = arg.drop(7)
+    array_colum.each_with_index do |item,index|
+      rang_column = calcule_column(item,index,rang) if index <= 1
+      column = final_cloumn(item,rang_column) if index == 2
+    end
+    column
+  end
+
+  def self.row(arg)
+    row = 0
+    rang_row_init = []
     arg.take(7).each_with_index do |item,index|
-      rang = intial_rang(item) if index == 0
-      rang = calcule_row(item,rang,index) if index >=1 && index <= 5
-      rang = zone(item,rang) if index == 6
+      rang_row_init = intial_rang_row(item,rang_row_init) if index == 0
+      rang_row_init = calcule_row(item,index,rang_row_init) if index >=1 && index <= 5
+      row = final_row(item,rang_row_init) if index == 6
+    end
+    row
+  end
+
+  def self.intial_rang_row(letter,rang)
+    case letter
+    when "F"
+      rang = [0,63]
+    when "B"
+      rang = [64,127]
     end
     rang
   end
 
-  def self.intial_rang(letter)
-    ran = []
-    case letter
-    when "F"
-      ran = [0,63]
-    when "B"
-      ran = [64,127]
-    end
-    ran
+  def self.operando(i)
+    n = 6
+    2**(n-i) - 1
   end
 
-  def self.calcule_row(letter,rang,index)
-    new_rang = []
-    h = {"1" => 31, "2" => 15, "3" => 7, "4" => 3, "5" => 1}
-
+  def self.calcule_row(letter,index,rang_row)
+    # h = {"1" => 31, "2" => 15, "3" => 7, "4" => 3, "5" => 1}
     case letter
     when "F"
-      new_rang[0] = rang[0]
-      new_rang[1] = rang[0] + h[index.to_s]
+      rang_row[0] = rang_row[0]
+      # rang_row[1] = rang_row[0] + h[index]
+      rang_row[1] = rang_row[0] + operando(index)
     when "B"
-      new_rang[0] = rang[1] - h[index.to_s]
-      new_rang[1] = rang[1]
+      # rang_row[0] = rang_row[1] - h[index]
+      rang_row[0] = rang_row[1] - operando(index)
+      rang_row[1] = rang_row[1]
     end
-    new_rang
+    rang_row
   end
 
-  def self.zone(letter,rang)
-    zone = 0
+  def self.final_row(letter,rang)
+    row = 0
     case letter
     when "F"
-      zone = rang[0]
+      row = rang[0]
     when "B"
-      zone = rang[1]
+      row = rang[1]
     end
-    zone
+    row
   end
 
-  def calcule_column(letter,index)
-    rang = [0,7]
+  def self.calcule_column(letter,index,rang_column)
+
     p = {"0" => 3, "1" => 1}
     case letter
     when "R"
-      rang[0] = rang[1] - p[index.to_s]
-      rang[1] = rang[1]
+      rang_column[0] = rang_column[1] - p[index.to_s]
+      rang_column[1] = rang_column[1]
     when "L"
-      rang[0] = rang[0]
-      rang[1] = rang[0] + p[index.to_s]
+      rang_column[0] = rang_column[0]
+      rang_column[1] = rang_column[0] + p[index.to_s]
     end
-    rang
+    rang_column
   end
 
-  def value_final_cloumn(letter,rang)
-    value = 0
+  def self.final_cloumn(letter,rang)
+    column = 0
     case letter
     when "R"
-      value = rang[1]
+      column = rang[1]
     when "L"
-      value = rang[0]
+      column = rang[0]
     end
-    value
+    column
   end
 end

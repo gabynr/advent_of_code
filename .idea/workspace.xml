@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69c82eda-068f-4daf-9b94-aac69c65a99a" name="Default Changelist" comment="resolve second part day 4">
-      <change afterPath="$PROJECT_DIR$/day_05/binary_boarding.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day_05/binary_boarding_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day_05/solve5.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/advent_of_code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/advent_of_code.iml" afterDir="false" />
+    <list default="true" id="69c82eda-068f-4daf-9b94-aac69c65a99a" name="Default Changelist" comment="Caculate first paart row&#10;initial calcule column">
+      <change afterPath="$PROJECT_DIR$/day_05/5.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day_05/binary_boarding.rb" beforeDir="false" afterPath="$PROJECT_DIR$/day_05/binary_boarding.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day_05/binary_boarding_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/day_05/binary_boarding_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day_05/solve5.rb" beforeDir="false" afterPath="$PROJECT_DIR$/day_05/solve5.rb" afterDir="false" />
     </list>
     <list id="91f6368b-9d6b-4f99-b879-f0937cb225b9" name="Changes by elyalvarado" comment="parte2 second part Day 4" />
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +273,9 @@
       <workItem from="1628864143774" duration="446000" />
       <workItem from="1629469080500" duration="5813000" />
       <workItem from="1629475832397" duration="1155000" />
-      <workItem from="1629727308366" duration="3118000" />
+      <workItem from="1629727308366" duration="3678000" />
+      <workItem from="1629896778525" duration="9205000" />
+      <workItem from="1630071968924" duration="4116000" />
     </task>
     <task id="LOCAL-00001" summary="create evironment initial">
       <created>1620154709070</created>
@@ -331,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627653453859</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Caculate first paart row&#10;initial calcule column">
+      <created>1629730525929</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629730525929</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +367,8 @@
     <MESSAGE value="resolve firts part day 4" />
     <MESSAGE value="resolve second part day 4" />
     <MESSAGE value="parte2 second part Day 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="parte2 second part Day 4" />
+    <MESSAGE value="Caculate first paart row&#10;initial calcule column" />
+    <option name="LAST_COMMIT_MESSAGE" value="Caculate first paart row&#10;initial calcule column" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/advent_of_code@ReportRepair_product_finds______1_.rcov" NAME="ReportRepair product finds ... (1) Coverage Results" MODIFIED="1620241687790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day_01" MODULE_NAME="advent_of_code" />
@@ -369,7 +379,7 @@
     <SUITE FILE_PATH="coverage/advent_of_code@_how_many_have_all_required_fields.rcov" NAME=" how many have all required fields Coverage Results" MODIFIED="1626441580679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day_04" MODULE_NAME="advent_of_code" />
     <SUITE FILE_PATH="coverage/advent_of_code@ReportRepair_product_finds______3_.rcov" NAME="ReportRepair product finds ... (3) Coverage Results" MODIFIED="1620519919988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day_01" MODULE_NAME="advent_of_code" />
     <SUITE FILE_PATH="coverage/advent_of_code@get_all_fifty_stars_spec.rcov" NAME="get_all_fifty_stars_spec Coverage Results" MODIFIED="1620174126007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="advent_of_code" />
-    <SUITE FILE_PATH="coverage/advent_of_code@BinaryBoarding_The_highest_seat_ID_on_a_boarding_pass.rcov" NAME="BinaryBoarding The highest seat ID on a boarding pass Coverage Results" MODIFIED="1629729252879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day_05" MODULE_NAME="advent_of_code" />
+    <SUITE FILE_PATH="coverage/advent_of_code@BinaryBoarding_The_highest_seat_ID_on_a_boarding_pass.rcov" NAME="BinaryBoarding The highest seat ID on a boarding pass Coverage Results" MODIFIED="1630073553540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day_05" MODULE_NAME="advent_of_code" />
     <SUITE FILE_PATH="coverage/advent_of_code@ReportRepair_product_finds____.rcov" NAME="ReportRepair product finds ... Coverage Results" MODIFIED="1620241530909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day_01" MODULE_NAME="advent_of_code" />
     <SUITE FILE_PATH="coverage/advent_of_code@PasswordPhilosophy_fails_Ga___.rcov" NAME="PasswordPhilosophy fails Ga... Coverage Results" MODIFIED="1620697717356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day_02" MODULE_NAME="advent_of_code" />
     <SUITE FILE_PATH="coverage/advent_of_code@BinaryBoarding.rcov" NAME="BinaryBoarding Coverage Results" MODIFIED="1629727365162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day_05" MODULE_NAME="advent_of_code" />
