@@ -1,11 +1,61 @@
 #
 module BinaryBoarding
 
+  def self.my_seat(arr)
+
+=begin
+    array = array_seat(arr)
+    insertion_sort(array)
+=end
+
+    array = array_seat(arr)
+    array.pop(7)
+    array.shift(7)
+    i = 0
+    while array[i] == array[i+1] - 1
+      i += 1
+    end
+    array[i] + 1
+  end
+
+  def self.insertion_sort(arr)
+    i = 1
+    while i < arr.length - 1
+      insert(arr,i,arr[i+1])
+      i += 1
+    end
+    arr
+  end
+
+  def self.insert(arr,right_index,value)
+    i = right_index
+    while (i >= 0 && arr[i] > value)
+      arr[i+1] = arr[i]
+      i -= 1
+    end
+    arr[i+1] = value
+  end
+
+  def self.highest_set_id(arg)
+    seat_id(arg)
+  end
+
+  def self.array_seat(arg)
+    seat_id_array = []
+    arg.each { |a|
+      set_id = (row(a) * 8) + column(a)
+      seat_id_array << set_id
+    }
+   seat_id_array.sort
+  end
+
   def self.seat_id(arg)
     highest_id = 0
+    seat_id_array = []
     arg.each { |a|
       set_id = (row(a) * 8) + column(a)
       highest_id  = set_id if  set_id > highest_id
+      seat_id_array << set_id
     }
     highest_id
   end
